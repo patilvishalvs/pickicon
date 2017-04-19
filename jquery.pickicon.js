@@ -68,7 +68,4 @@
         methods.init();
         return this;
     };
-    $(document).ready(function () {
-        $(".pickicon").pickicon({iconSets: { 'fa': 'json/fa.json' }});
-    });
 })(jQuery);
