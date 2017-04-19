@@ -6,9 +6,9 @@
     border: 1px solid #b7b7b7;
 }
 .pickicon-wrapper .pick-icon-icons {
-    margin: 0 -1px;
+    margin: 15px -1px;
     overflow-y: scroll;
-    height: 370px;
+    height: 320px;
 }
 .pickicon-wrapper .input-filter {
     width: 100%;
