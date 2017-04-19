@@ -46,6 +46,7 @@
             },
             render: function () {
                 var $this = this;
+                this.ele.iconsWrap.empty();
                 this.ele.filterWrap.append(this.ele.filter);
                 this.ele.container.append(this.ele.filterWrap);
                 this.ele.container.append(this.ele.iconsWrap);
