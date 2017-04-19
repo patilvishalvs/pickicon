@@ -54,7 +54,7 @@
                         var icon = $this.ele.icon.clone();
                         var iconContent = $this.ele.iconContent.clone();
                         icon.attr('title', icons.icons[key]);
-                        icon.attr('data-value', icons.icons[key]);
+                        icon.attr('data-value', icons.commonClass+' '+icons.icons[key]);
                         iconContent.addClass(icons.commonClass);
                         iconContent.addClass(icons.icons[key]);
                         icon.append(iconContent);
