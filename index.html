@@ -7,7 +7,8 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Pickicon</title>
 
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
         <link href="pickicon.css" rel="stylesheet" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,7 +26,10 @@
         <script type="text/javascript">
             (function($){
                 $(document).ready(function () {
-                    $(".pickicon").pickicon({iconSets: { 'fa': 'json/fa.json' }});
+                    $(".pickicon").pickicon({iconSets: [
+                            'json/fa.json', 'json/glyph.json'
+                        ] 
+                    });
                 });
             })(jQuery);
         </script>
