@@ -9,8 +9,12 @@
             ele: {},
             icons: [],
             init: function () {
+                var $this = this;
                 this.setIcons();
                 this.cacheDOM();
+                $ele.on("focus", function(){
+                    $this.ele.container.show();
+                });
                 this.ele.container.on('keyup', '.input-filter', function(){
                     var filter = $(this).val().toLowerCase();
                     if(filter != ''){
@@ -22,12 +26,16 @@
                 });
                 this.ele.container.on('click', 'a.icon', function(){
                     $ele.val($(this).data("value"));
+                    $this.ele.selectedIcon.html('<i class="'+$(this).data("value")+'"></i>');
                     $('.pickicon-wrapper a.icon').removeClass('active');
                     $(this).addClass('active');
                 });
             },
             cacheDOM: function () {
+                $ele.wrap('<div class="pickicon-container">');
                 $ele.after('<div class="pickicon-wrapper">');
+                this.ele.selectedIcon = $('<a href="javascript:void(0);" class="icon selected-icon">');
+                $ele.after(this.ele.selectedIcon);
                 this.ele.container = $ele.siblings(".pickicon-wrapper");
                 this.ele.filterWrap = $('<div class="pick-icon-filter">');
                 this.ele.iconsWrap = $('<div class="pick-icon-icons">');
@@ -62,7 +70,7 @@
                         $this.ele.iconsWrap.append(icon);
                     }
                 });
-                
+                $this.ele.selectedIcon.html('<i class="'+$ele.val()+'"></i>');
                 $('a.icon[title="'+$ele.val()+'"').addClass('active').focus();
             }
         };
