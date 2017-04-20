@@ -43,8 +43,8 @@
     border: 1px solid #b7b7b7;
     text-align: center;
     color: #333;
-    padding: 1px;
-    font-size: 19px;
+    padding: 3px;
+    font-size: 16px;
     right: 0;
 }
 .pickicon-wrapper .icon.active{
