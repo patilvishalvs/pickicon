@@ -159,8 +159,6 @@
         "glyphicon-sort-by-attributes",
         "glyphicon-sort-by-attributes-alt",
         "glyphicon-unchecked",
-        "glyphicon-expand",
-        "glyphicon-collapse",
-        "glyphicon-collapse-top"
+        "glyphicon-expand"
     ]
 }
